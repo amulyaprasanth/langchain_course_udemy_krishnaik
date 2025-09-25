@@ -1,13 +1,13 @@
 import streamlit as st
 import os
 from langchain_groq import ChatGroq
-from langchain_openai import OpenAIEmbeddings
 from langchain_community.embeddings import OllamaEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import create_retrieval_chain
 from langchain_community.vectorstores import FAISS
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.document_loaders import PyPDFDirectoryLoader
 
 from dotenv import load_dotenv
@@ -18,6 +18,10 @@ os.environ["OPENAI_API_KEY"] =  os.getenv("OPENAI_API_KEY")
 os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
 
 groq_api_key = os.getenv("GROQ_API_KEY")
+
+## If you do not have open AI key use the below Huggingface embedding
+os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
+embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="gemma2-9b-it")
 
@@ -34,7 +38,7 @@ prompt = ChatPromptTemplate.from_template(
 
 def create_vector_embedding():
     if  "vectors" not in st.session_state:
-        st.session_state.embeddings = OpenAIEmbeddings()
+        st.session_state.embeddings = embeddings
         st.session_state.loader = PyPDFDirectoryLoader("4 RAG Document Q&A/research_papers")
         st.session_state.docs  = st.session_state.loader.load()
         st.session_state.text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
