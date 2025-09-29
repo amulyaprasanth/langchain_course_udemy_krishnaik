@@ -17,8 +17,13 @@ streamlit
 arxiv
 tqdm
 pymupdf
+arxiv
 fastapi
 uvicorn
 langserve
 pydantic<2
 sse_starlette
+wikipedia
+duckduckgo-search
+langchain_cohere
+mysql-connector-python
