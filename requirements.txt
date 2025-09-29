@@ -27,3 +27,5 @@ wikipedia
 duckduckgo-search
 langchain_cohere
 mysql-connector-python
+youtube_transcript_api
+pytube
