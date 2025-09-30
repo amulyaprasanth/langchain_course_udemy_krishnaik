@@ -1,5 +1,6 @@
 langchain
-ipykernel
+jupyter
+ipywidgets
 python-dotenv
 faiss-cpu
 langchain_community
@@ -10,6 +11,7 @@ langchain_ollama
 langchain_text_splitters
 langchain_huggingface
 langchain_chroma
+langchain_astradb 
 sentence_transformers
 pypdf
 bs4
@@ -30,3 +32,4 @@ mysql-connector-python
 youtube_transcript_api
 pytube
 numexpr
+huggingface_hub
