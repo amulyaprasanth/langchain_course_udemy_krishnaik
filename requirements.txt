@@ -10,6 +10,7 @@ langchain_groq
 langchain_ollama
 langchain_text_splitters
 langchain_huggingface
+langchain_nvidia_ai_endpoints
 langchain_chroma
 langchain_astradb 
 sentence_transformers
