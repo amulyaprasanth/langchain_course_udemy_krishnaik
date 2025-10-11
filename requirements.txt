@@ -1,8 +1,4 @@
 langchain
-jupyter
-ipywidgets
-python-dotenv
-faiss-cpu
 langchain_community
 langchain_openai
 langchain_core
@@ -12,7 +8,10 @@ langchain_text_splitters
 langchain_huggingface
 langchain_nvidia_ai_endpoints
 langchain_chroma
-langchain_astradb 
+langchain_astradb
+jupyter
+python-dotenv
+faiss-cpu
 sentence_transformers
 pypdf
 bs4
@@ -31,6 +30,10 @@ mysql-connector-python
 youtube_transcript_api
 pytube
 numexpr
-huggingface_hub
+# crew ai
 crewai
 crewai-tools
+## pinecone
+pinecone
+pinecone-text
+pinecone-notebooks
