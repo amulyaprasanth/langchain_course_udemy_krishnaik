@@ -19,8 +19,6 @@ bs4
 streamlit
 arxiv
 tqdm
-pymupdf
-arxiv
 fastapi
 uvicorn
 langserve
@@ -34,3 +32,5 @@ youtube_transcript_api
 pytube
 numexpr
 huggingface_hub
+crewai
+crewai-tools
